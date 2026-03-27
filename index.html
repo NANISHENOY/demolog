@@ -21,13 +21,13 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="container-xl d-flex align-items-stretch" >
+<body class="min-vh-100 d-flex align-items-stretch">
 
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-xl-4 col-md-6 col-12 d-flex align-items-center order-1 order-md-1 p-4">
-        <div class="w-100">
+      <div class=" col-md-6 col-12 d-flex align-items-center order-1 order-md-1">
+        <div class="container-fluid w-75 ">
           <p class="welcome-text">Welcome,</p>
           <p class="sub-text">See your growth and get consulting support</p>
 
@@ -48,11 +48,10 @@
           <label class="form-label-custom">Password</label>
           <div class="position-relative mb-3">
             <input id="password" type="password" class="form-control custom-input pe-5" placeholder="min. 8 characters">
-
-  <i class="fa fa-eye position-absolute top-50 end-0  translate-middle-y me-3" id="togglePassword" 
-    style="color: #828181; cursor: pointer;">
-  </i>
-           </div>
+            <i class="fa fa-eye position-absolute top-50 end-0 translate-middle-y me-3" id="togglePassword" 
+              style="color: #828181; cursor: pointer;">
+            </i>
+          </div>
 
           <div class="d-flex justify-content-between align-items-center mb-4">
             <div class="form-check mb-0">
@@ -71,8 +70,9 @@
         </div>
       </div>
 
-      <div class="col-xl-8 col-md-6 col-12 d-flex align-items-center justify-content-center order-2 order-md-2 p-4">
-        <img src="assets/images/Group 168.png" class="img-fluid login-img" alt="">
+    
+      <div class="col-md-6 col-12 d-flex align-items-center justify-content-center order-2 order-md-2 p-0">
+        <img src="assets/images/Group 168.png" class="w-100 login-img" style="display: block;" alt="">
       </div>
 
     </div>
@@ -80,18 +80,16 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-  const togglePassword = document.getElementById('togglePassword');
-  const password = document.getElementById('password');
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
 
-  togglePassword.addEventListener('click', () => {
-    const isPassword = password.type === 'password';
-
-    password.type = isPassword ? 'text' : 'password';
-
-    togglePassword.classList.toggle('fa-eye');
-    togglePassword.classList.toggle('fa-eye-slash');
-  });
-</script>
+    togglePassword.addEventListener('click', () => {
+      const isPassword = password.type === 'password';
+      password.type = isPassword ? 'text' : 'password';
+      togglePassword.classList.toggle('fa-eye');
+      togglePassword.classList.toggle('fa-eye-slash');
+    });
+  </script>
 
 </body>
 </html>
