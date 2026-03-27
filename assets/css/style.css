@@ -195,11 +195,11 @@ body {
 }
 
 .row {
-      --bs-gutter-x: 0 !important;
+      --bs-gutter-x: 0 ;
     
 }
 .col-md-6.pe-0 {
-      padding-right: 0 !important;
+      padding-right: 0 ;
     }
 
  
@@ -208,7 +208,7 @@ body {
 
   .col-md-4, .col-md-6 {
 
-    padding: 1rem !important;
+    padding: 1rem;
 
   }
  
@@ -217,14 +217,32 @@ body {
     font-size: 1.3rem;
 
   }
+  
+  
+
+    .google-btn {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+      
+      font-size: 14px;
+      
+      gap: 8px;
+
+      
+    }
+
+    .google-btn img {
+      
+      width: 20px;
+      
+      height: 20px;
+    }
+
  
-  .google-btn {
-
-    font-size: 14px;
-
-    gap: 8px;
-
-  }
  
   .divider span {
 
@@ -245,8 +263,9 @@ body {
   }
  
   .login-btn {
+    color:#222327 ;
 
-    font-size: 1rem;
+    font-size:20px ;
 
     height: 50px;
 
