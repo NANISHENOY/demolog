@@ -14,7 +14,7 @@
   <meta property="og:description" content="See your growth and get consulting support.">
   <meta property="og:image" content="assets/images/blazer.favicon.png">
   <meta property="og:type" content="website">
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="icon" type="image/png" href="assets/images/blazers_favicon.png">
@@ -24,6 +24,8 @@
 </head>
 
 <body class="min-vh-100 d-flex align-items-stretch">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/main.js"></script>
 
   <div class="container-fluid">
     <div class="row">
@@ -33,7 +35,7 @@
           <p class="welcome-text">Welcome,</p>
           <p class="sub-text">See your growth and get consulting support</p>
 
-          <button class="google-btn">
+          <button class="google-btn" id="google-btn">
             <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo">
             Sign in with Google
           </button>
@@ -45,15 +47,19 @@
           </div>
 
           <label class="form-label-custom">Email</label>
-          <input type="email" class="form-control custom-input" placeholder="mail@gmail.com">
-
+          <input type="email" class="form-control custom-input" id="email" placeholder="mail@gmail.com">
+          <small id="error" ></small> <br>
           <label class="form-label-custom">Password</label>
           <div class="position-relative mb-3">
             <input id="password" type="password" class="form-control custom-input pe-5" placeholder="min. 8 characters">
             <i class="fa fa-eye position-absolute top-50 end-0 translate-middle-y me-3" id="togglePassword" 
               style="color: #828181; cursor: pointer;">
             </i>
+            
+
           </div>
+          <small id="passerror"></small>
+          <br>
 
           <div class="d-flex justify-content-between align-items-center mb-4">
             <div class="form-check mb-0">
@@ -63,7 +69,7 @@
             <span class="link-text">Forgot password?</span>
           </div>
 
-          <button class="login-btn">Login</button>
+          <button id="login" class="login-btn">Login</button>
 
           <p class="register-text">
             Not registered yet?
@@ -80,16 +86,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const togglePassword = document.getElementById('togglePassword');
-    const password = document.getElementById('password');
-
-    togglePassword.addEventListener('click', () => {
-      const isPassword = password.type === 'password';
-      password.type = isPassword ? 'text' : 'password';
-      togglePassword.classList.toggle('fa-eye');
-      togglePassword.classList.toggle('fa-eye-slash');
-    });
+  
   </script>
 
 </body>

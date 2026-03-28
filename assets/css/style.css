@@ -146,7 +146,7 @@ body {
 
   background-color: #1AEBB6;
 
-  color: #222327;
+  color: white;
 
   height: 56px;
 
@@ -271,5 +271,13 @@ body {
 
   }
 
+}
+#error{
+  color: red;
+}
+ 
+
+#passerror{
+  color: red;
 }
  
